@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us - Studio Name{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-6">
+            <h1 class="mb-4">Contact Us</h1>
+            <div class="mb-4">
+                <h3 class="h5">Location</h3>
+                <p>123 Styling Street<br>City, State 12345</p>
+                
+                <h3 class="h5">Hours</h3>
+                <p>Monday - Friday: 9am - 7pm<br>
+                Saturday: 10am - 6pm<br>
+                Sunday: Closed</p>
+                
+                <h3 class="h5">Phone</h3>
+                <p>(555) 123-4567</p>
+            </div>
+            
+            <!-- Contact Form -->
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+        <div class="col-lg-6">
+            <!-- Add a map here -->
+            <div class="bg-light p-4 h-100">
+                <p class="text-center">Map placeholder - Add Google Maps or other map service here</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

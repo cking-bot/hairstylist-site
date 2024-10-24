@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us - Studio Name{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-6">
+            <h1 class="mb-4">About Our Studio</h1>
+            <p class="lead">Welcome to Studio Name, where style meets expertise.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Our team of experienced stylists is dedicated to helping you achieve the perfect look. We believe that every client deserves personalized attention and care.</p>
+        </div>
+        <div class="col-lg-6">
+            <img src="{% static 'images/salon-interior.jpg' %}" alt="Salon Interior" class="img-fluid rounded">
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="row mt-5">
+        <h2 class="text-center mb-4">Meet Our Team</h2>
+        <!-- Replace with actual team members -->
+        {% for i in '123'|make_list %}
+        <div class="col-md-4">
+            <div class="card text-center">
+                <img src="{% static 'images/stylist-placeholder.jpg' %}" class="card-img-top" alt="Stylist">
+                <div class="card-body">
+                    <h5 class="card-title">Stylist Name</h5>
+                    <p class="card-text">Specializes in cuts, color, and styling.</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

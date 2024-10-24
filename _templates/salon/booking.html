@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}Book Appointment - Studio Name{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="text-center mb-5">Book an Appointment</h1>
+    
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="service" class="form-label">Select Service</label>
+                            <select class="form-select" id="service" required>
+                                <option value="">Choose a service...</option>
+                                <option value="haircut">Haircut</option>
+                                <option value="color">Color</option>
+                                <option value="highlight">Highlights</option>
+                                <option value="style">Styling</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="stylist" class="form-label">Select Stylist</label>
+                            <select class="form-select" id="stylist" required>
+                                <option value="">Choose a stylist...</option>
+                                <option value="stylist1">Stylist 1</option>
+                                <option value="stylist2">Stylist 2</option>
+                                <option value="stylist3">Stylist 3</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Preferred Date</label>
+                            <input type="date" class="form-control" id="date" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="time" class="form-label">Preferred Time</label>
+                            <input type="time" class="form-control" id="time" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="notes" class="form-label">Special Notes</label>
+                            <textarea class="form-control" id="notes" rows="3"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary w-100">Book Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

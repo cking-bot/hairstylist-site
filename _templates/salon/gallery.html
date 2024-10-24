@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Gallery - Studio Name{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="text-center mb-5">Our Work</h1>
+    
+    <div class="row g-4">
+        <!-- Replace with actual images -->
+        {% for i in '123456'|make_list %}
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="{% static 'images/placeholder.jpg' %}" class="card-img-top" alt="Hairstyle example">
+                <div class="card-body">
+                    <h5 class="card-title">Style Example {{i}}</h5>
+                    <p class="card-text">Description of the hairstyle and technique used.</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
