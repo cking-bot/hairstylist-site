@@ -15,7 +15,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'home' %}">
+            <a class="navbar-brand" href="{% url 'salon:home' %}">
                 <!-- You can add your logo here -->
                 <span class="fs-4">Studio Name</span>
             </a>
@@ -26,22 +26,22 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'salon:home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if 'services' in request.path %}active{% endif %}" href="{% url 'services' %}">Services</a>
+                        <a class="nav-link {% if 'services' in request.path %}active{% endif %}" href="{% url 'salon:services' %}">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if 'gallery' in request.path %}active{% endif %}" href="{% url 'gallery' %}">Gallery</a>
+                        <a class="nav-link {% if 'gallery' in request.path %}active{% endif %}" href="{% url 'salon:gallery' %}">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if 'about' in request.path %}active{% endif %}" href="{% url 'about' %}">About</a>
+                        <a class="nav-link {% if 'about' in request.path %}active{% endif %}" href="{% url 'salon:about' %}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if 'contact' in request.path %}active{% endif %}" href="{% url 'contact' %}">Contact</a>
+                        <a class="nav-link {% if 'contact' in request.path %}active{% endif %}" href="{% url 'salon:contact' %}">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-primary text-white ms-lg-3" href="{% url 'booking' %}">Book Now</a>
+                        <a class="nav-link btn btn-primary text-white ms-lg-3" href="{% url 'salon:booking' %}">Book Now</a>
                     </li>
                 </ul>
             </div>
